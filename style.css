@@ -6,6 +6,7 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  background-color: var(--black-08);
 }
 
 :root {
@@ -38,12 +39,16 @@ body {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 162px;
+  padding: 30px 162px;
+  z-index: 2;
 }
-
 
 .header-nav__container {
   display: flex;
@@ -54,7 +59,6 @@ body {
   border-radius: 12px;
   align-items: center;
   justify-content: center;
-  
 }
 
 .header__list {
@@ -62,7 +66,6 @@ body {
   list-style-type: none;
   gap: 30px;
   margin: 10px 40px 10px 10px;
-
 }
 
 .header__link {
@@ -75,6 +78,125 @@ body {
 }
 
 .header__container {
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 1092px;
+}
+
+.hero__media {
+  position: relative;
+  width: 100%;
+  height: 860px;
+}
+
+.hero__posters {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero__posters-group {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 20px;
+}
+
+.hero__posters-group img {
+  border-radius: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.hero__fade-out-top {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero__fade-out-bottom {
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero__icon {
+  width: 470px;
+  height: 470px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  right: 0;
+}
+
+.btn {
+  background-color: var(--red-45);
+  color: var(--white);
+  display: inline-flex; 
+  padding: 18px 24px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.content__button {
+  display: inline-flex; 
+  gap: 8px;
+  align-self: center;
+}
+
+.content__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 1096px;
+  height: 182px;
+}
+
+.content__text-container h1{
+  font-size: 58px;
+  color: var(--white);
+}
+
+.text {
+  color: var(--grey-60);
+  font-size: 18px;
+  text-align: center;
+}
+
+.hero__content {
+  height: 296px;
+  padding: 0 412px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  gap: 50px;
+  bottom: 296px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.content__button span {
+  font-size: 18px;
 }
